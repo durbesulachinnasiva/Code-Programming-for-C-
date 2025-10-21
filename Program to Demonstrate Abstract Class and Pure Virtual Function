@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+class Shape {
+public:
+    virtual void area() = 0;
+};
+
+class Rectangle : public Shape {
+    int l, b;
+public:
+    Rectangle(int a, int c): l(a), b(c) {}
+    void area() { cout << "Area: " << l*b << endl; }
+};
+
+int main() {
+    Rectangle r(5, 10);
+    r.area();
+    return 0;
+}
