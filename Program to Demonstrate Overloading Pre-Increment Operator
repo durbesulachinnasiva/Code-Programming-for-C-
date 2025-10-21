@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+class Number {
+    int n;
+public:
+    Number(int x=0): n(x) {}
+    void operator++() {
+        ++n;
+    }
+    void display() { cout << "Value: " << n << endl; }
+};
+
+int main() {
+    Number num(5);
+    ++num;
+    num.display();
+    return 0;
+}
+ 
