@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+class Count {
+    static int objCount;
+public:
+    Count() { objCount++; }
+    static void displayCount() {
+        cout << "Total Objects: " << objCount << endl;
+    }
+};
+int Count::objCount = 0;
+
+int main() {
+    Count a, b, c;
+    Count::displayCount();
+    return 0;
+}
