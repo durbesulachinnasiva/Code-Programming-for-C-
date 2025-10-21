@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+class Box {
+    int length;
+public:
+    Box(int l=0): length(l) {}
+    void operator=(const Box &b) {
+        length = b.length;
+        cout << "Assignment operator called\n";
+    }
+    void show() { cout << "Length: " << length << endl; }
+};
+
+int main() {
+    Box b1(10), b2;
+    b2 = b1;
+    b2.show();
+    return 0;
+}
