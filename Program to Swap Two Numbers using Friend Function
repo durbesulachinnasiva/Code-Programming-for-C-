@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+class Swap {
+    int a, b;
+public:
+    Swap(int x, int y): a(x), b(y) {}
+    friend void swapValues(Swap &s);
+};
+
+void swapValues(Swap &s) {
+    int temp = s.a;
+    s.a = s.b;
+    s.b = temp;
+    cout << "After swapping: a=" << s.a << ", b=" << s.b << endl;
+}
+
+int main() {
+    Swap s(10, 20);
+    swapValues(s);
+    return 0;
+}
