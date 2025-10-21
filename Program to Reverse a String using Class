@@ -1,0 +1,23 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+class StringRev {
+    string str;
+public:
+    void getData() {
+        cout << "Enter a string: ";
+        cin >> str;
+    }
+    void reverseStr() {
+        reverse(str.begin(), str.end());
+        cout << "Reversed String: " << str << endl;
+    }
+};
+
+int main() {
+    StringRev s;
+    s.getData();
+    s.reverseStr();
+    return 0;
+}
